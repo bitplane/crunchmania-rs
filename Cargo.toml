@@ -14,7 +14,7 @@ categories = ["compression", "command-line-utilities"]
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
-thiserror = "1"
+thiserror = "2"
 
 [[bin]]
 name = "crunchmania"
