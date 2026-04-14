@@ -1,0 +1,25 @@
+[package]
+name = "crunchmania"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "WTFPL"
+authors = ["Gareth Davidson <gaz@bitplane.net>"]
+description = "Crunch-Mania compressor/decompressor (Commodore Amiga era CrM files)"
+readme = "README.md"
+repository = "https://github.com/bitplane/crunchmania-rs"
+homepage = "https://bitplane.net/dev/rust/crunchmania"
+keywords = ["amiga", "compression", "crunchmania", "lz77", "retro"]
+categories = ["compression", "command-line-utilities"]
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+thiserror = "1"
+
+[[bin]]
+name = "crunchmania"
+path = "src/bin/crunchmania.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
